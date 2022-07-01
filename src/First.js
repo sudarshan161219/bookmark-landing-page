@@ -1,4 +1,6 @@
 import firstimg from './illustration-hero.svg'
+// import img from './illustration-features-tab-1.svg'
+
 
 
 
@@ -7,9 +9,9 @@ export default function First(){
         
         <>
        
+       <div className='bg-blue'> </div>
         <div className='first-img-container'>
-        <div className='bg-blue'> </div>
-        <img className='first-img' src={firstimg}  alt="logo" />
+        <img className='first-img' src={firstimg}  alt="img" />
         </div>
 
 
