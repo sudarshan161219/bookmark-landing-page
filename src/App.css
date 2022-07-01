@@ -1,38 +1,231 @@
+
+:root {
+    --color-SoftBlue: hsl(231, 69%, 60%);
+    --color-SoftRed: hsl(0, 94%, 66%);
+    --color-Black: hsl(0, 0%, 0%);
+    --color-White: hsl(0, 0%, 100%);
+    --color-GrayishBlue: hsl(229, 8%, 60%);
+    --color-VeryDarkBlue: hsl(229, 31%, 21%);
+    --color-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+
+  *, *::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  @page {
+    size: auto;
+    margin: 0;
+}
+
+  /* body { */
+    /* display: flex;
+
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    background-color:var(--color-White); */
+  /* } */
+
+
 .App {
+  margin: 1.5rem 1.5rem;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+
+/* nav */
+.nav{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+
+
+/* first image container */
+
+.first-img{
+  width: 100%;
+ 
+}
+
+.first-img-container{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+
+
+
+@media (min-width:375px) {
+
+  .bg-blue {
+    z-index: -1;
+    position: absolute;
+    width: 277px;
+    height: 190px;
+    top: 188px;
+    left: 98px;
+    background-color: var(--color-SoftBlue);
+    border-radius: 100px 0 0 100px;
+}
+
+}
+
+
+@media (min-width:425px) {
+
+  .bg-blue {
+      width: 327px;
+      height: 206px;
+      top: 192px;
+      left: 98px;
+}
+
+}
+
+
+@media (min-width:500px) {
+
+  .bg-blue {
+    width: 382px;
+    height: 242px;
+    top: 205px;
+    left: 118px;
+}
+
+.span-heading-one:hover, .span-heading-two:hover, .span-heading-three:hover {
+  cursor: pointer;
+}
+
+}
+
+
+.firstContent{
+  display: grid;
+  grid-gap: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first-heading{
+ font-weight: 500;
+ color: var(--color-VeryDarkBlue);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.first-paragraph, .span-paragraph{
+  font-weight: 400;
+  color: var(--color-GrayishBlue);
+  line-height: 1.7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttons{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 50px;
+  column-gap: 8px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.btnone,.btntwo{
+  display: grid;
+  align-content:center;
+  font-weight: 500;
+  border-radius: 7px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.btnone{
+  width: 100%;
+  background-color:var(--color-SoftBlue);
+  color: var(--color-White);
+  box-shadow: var(--color-shadow);
 }
+
+.btntwo{
+  width: 100%;
+  background-color:floralwhite;
+  color: var(--color-VeryDarkBlue);
+  box-shadow: var(--color-shadow);
+}
+
+
+.grid-one{
+  margin-top: 10rem;
+  text-align: center;
+  display: grid;
+  grid-gap:20px;
+}
+
+.span-heading{
+font-size: 1.5rem;
+font-weight: 500;
+}
+
+
+hr{
+  border: 1px solid var(--color-GrayishBlue);
+  opacity: 0.3;
+}
+
+.two-container-grid{
+  display: grid;
+  grid-gap: 50px;
+}
+
+.grid-two{
+  text-align: center;
+  display: grid;
+  grid-gap:20px;
+}
+
+.span-heading-one, .span-heading-two, .span-heading-three{
+font-weight: 500;
+position: relative;
+
+}
+
+
+.span-heading-one::before, .span-heading-two::before, .span-heading-three::before {
+  content: '';
+  position: absolute;
+  width: 35%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--color-SoftRed);
+  bottom: -20px;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.span-heading-two::before{
+  width: 32%;
+}
+
+.span-heading-three::before{
+  width: 23%;
+}
+
+.span-heading-one:hover::before, .span-heading-two:hover::before, .span-heading-three:hover::before {
+  transform-origin: center;
+  transform: scaleX(1);
+  }
+
+
+
+
