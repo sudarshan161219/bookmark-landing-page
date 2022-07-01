@@ -19,8 +19,8 @@ export default function First(){
   browser tab and see your sites load instantly. Try it for free.</p>
 
 <div className="buttons">
-<div className="btnone"> <a href=" " >Get it on Chrome</a> </div>
-<div className="btntwo"> <a href=" " >Get it on Firefox</a> </div>
+<div className="btnone"> <a className="btnnone" href=" " >Get it on Chrome</a> </div>
+<div className="btntwo"> <a  className="btnntwo" href=" " >Get it on Firefox</a> </div>
 </div>
 
 </div>

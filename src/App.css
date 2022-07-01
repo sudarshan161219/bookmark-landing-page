@@ -38,6 +38,9 @@
     background-color:var(--color-White); */
   /* } */
 
+a{
+  text-decoration: none;
+}
 
 .App {
   margin: 1.5rem 1.5rem;
@@ -148,18 +151,25 @@
   
 }
 
+.btnnone{
+  color: var(--color-White);
+}
+
+.btnntwo{
+ color: var(--color-VeryDarkBlue);
+}
 
 .btnone{
   width: 100%;
   background-color:var(--color-SoftBlue);
-  color: var(--color-White);
+
   box-shadow: var(--color-shadow);
 }
 
 .btntwo{
   width: 100%;
   background-color:floralwhite;
-  color: var(--color-VeryDarkBlue);
+
   box-shadow: var(--color-shadow);
 }
 
@@ -203,7 +213,8 @@ position: relative;
 .span-heading-one::before, .span-heading-two::before, .span-heading-three::before {
   content: '';
   position: absolute;
-  width: 35%;
+  width: 100%;
+  max-width: 155px;
   height: 4px;
   border-radius: 4px;
   background-color: var(--color-SoftRed);
@@ -214,11 +225,13 @@ position: relative;
 }
 
 .span-heading-two::before{
-  width: 32%;
+  width: 100%;
+  max-width: 136px;
 }
 
 .span-heading-three::before{
-  width: 23%;
+  width: 100%;
+  max-width: 100px;
 }
 
 .span-heading-one:hover::before, .span-heading-two:hover::before, .span-heading-three:hover::before {
